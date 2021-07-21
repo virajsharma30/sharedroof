@@ -1,0 +1,449 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* navbar */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+nav{
+    background: #222222;
+    padding: 10px 30px 10px 25px;
+    overflow: hidden;
+    z-index: 9999;
+    position: fixed;
+    width: 98%;
+}
+nav .topnav {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+nav .topnav .logo{
+    flex:2;
+    list-style: none;
+    font-size:25px;
+    font-weight:400;  
+    
+}
+nav .topnav .logo a{
+    color: rgb(250, 177, 20);
+    text-decoration: none;
+
+}
+
+nav .topnav .items{
+    padding: 0 25px;
+    
+}
+
+nav .topnav .items a {
+    text-decoration: none;
+    padding: 0 18px;
+    font-size: 18px;
+    color: rgb(250, 177, 20);
+}
+
+nav .topnav .items a:hover {
+    color: white;
+}
+
+nav .topnav .icon {
+    display: none;
+    color: rgb(250, 177, 20);
+}
+
+nav .topnav .search{
+    height: 30px;
+    width: 240px;
+    display: flex;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+nav .topnav .search input{
+    height: 100%;
+    width: 200px;
+    border: none;
+    outline: none;
+    padding:0 10px;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    
+}
+nav .topnav .search button{
+    height: 100%;
+    width: 40px;
+    border: 1px solid #cccccc;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    display: block;
+}
+nav  .search .button i{
+    color: #222222;
+    font-size: 20px;
+    top: 50%;
+}
+nav  .search .button i:hover{
+    background: #e6e6e6;
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+    nav{
+        width: 87%;
+    }
+    nav .topnav .items a {
+        display: none;
+    }
+    nav .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    nav .topnav .search {
+        margin-right: 40px;
+        height: 30px;
+        width: 160px;
+        padding: 0 1px;
+    }    
+    nav .topnav .search input{
+
+        height: 100%;
+        width: 130px;
+
+    }
+    nav .topnav .search button{
+        margin-right: -10px;
+        height: 100%;
+        width: 30px;
+        
+
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+    nav .topnav.responsive {
+        position: relative;
+    }
+    nav .topnav.responsive .icon {
+        position: absolute;
+        display: block;
+        right: 0;
+        top: 0;
+    }
+    nav .topnav.responsive .items{
+        margin-left: -23px;
+
+    }
+    nav .topnav.responsive .items a {
+        padding: 10px 100px 10px 0px;
+        float: left;
+        display: block;
+        text-align: left;
+    }
+    nav .topnav.responsive .search {
+        display: none;
+    }
+    
+ 
+}
+/* navbar close */
+
+/* Post Ads */
+.hero1{
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    background: #fff;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+@media screen and (min-width: 1024px) {
+    .hero1{
+        width: 60%;
+        margin: 6% auto;
+    }
+    .form-box1{
+        margin-left: 15px;
+        padding: 20px;
+    
+    }
+}
+
+.add-post{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.form-box1 .Dt-1 {
+    
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #fff;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 2px;
+}
+
+.Dt-1 h1{
+    font-size: 22px;
+    font-weight: 1200;
+    text-transform: uppercase;
+
+}
+.input-groups {
+    padding: 5px;
+    width: 280px;
+}
+.label-fields{
+    font-size: 21px;
+    font-weight: 650;
+}
+.input-fields{
+    width: 100%;
+    font-size: 17px;
+    padding: 8px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-box1 .img-upload{
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #fff;
+    border-bottom: 1px solid white;
+}
+.form-box1 .img-upload .img-fields{
+    font-size: large;
+    padding: 10px 70px 10px 0;
+}
+
+.hero1 .form-box1 textarea{
+    width: 65%;
+    padding: 12px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: large;
+}
+.hero1 .form-box1 .submit-btn1{
+    border-top: 1px solid white;
+    box-sizing: border-box;
+    background: #fff;
+}
+.hero1 .form-box1 .submit-btn1 button{
+    margin-top: 20px;
+    width: 20%;
+    height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+@media screen and (max-width: 600px) {
+    .hero1{
+        width: 100%;
+        margin: 1% auto;
+    }  
+    .hero1 .form-box1 textarea{
+        width: 75%;
+        font-size: 18px;
+    }
+    .form-box1{
+        margin-left: 0;
+        padding: 18px;
+    
+    }
+    .hero1 .form-box1 .submit-btn1 button{
+        width: 30%;
+    }
+}
+
+
+
+
+/* Post Ads */
+
+.hero {
+    height: 100%;
+    width: 100%;
+    background-image: linear- gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(http://www.luxapartments.ro/jomres/uploadedimages/1/slideshow/0/05.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.form-box {
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: #ddd;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.button-box {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.social-icons {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.input-group {
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn {
+    width: 55%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box {
+    margin: 30px 10px 30px 0;
+}
+
+span {
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+#login {
+    left: 50px;
+}
+
+#register {
+    left: 450px;
+}
+
+.img__wrap:hover{
+    transform: translateY(-20px);
+    transition: all 1s;
+}
+.img__wrap {
+    position: relative;
+    width:30%;
+    border-radius: 10px;
+    height: 100%;
+    padding-left: 37px; 
+    padding-bottom: 80px;  
+  }
+  
+  .img__description {
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    transform: translate(-50%, -50%) ;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+  .name_desc {
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 25px;
+    background-color: black;
+    
+  }
+  
+  .img__wrap:hover .img__description {
+    visibility: visible;
+    opacity: 1;
+  }
+  .img__wrap:hover .name_desc{
+    visibility: hidden;
+    opacity: 0;
+
+  }
+  .img_img{
+    border-radius: 10px;
+    height: auto; 
+  }
+  
+    @media screen and (max-width: 800px) {
+        .img__wrap {
+          width: 80%; /* The width is 100%, when the viewport is 800px or smaller */
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .img__img {
+            width:80%; /* The width is 100%, when the viewport is 800px or smaller */
+          }
+
+      }

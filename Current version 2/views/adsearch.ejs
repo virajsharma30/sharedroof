@@ -1,0 +1,71 @@
+<%-include('./partial/header.ejs')-%>
+
+    <br><br><br>
+    <h1>Advertisements</h1>
+    <br><br>
+
+    <!-- button onclick="window.location.href = 'http://localhost:3000/test';" value="123456" id="testid" name="btn">click here</button>
+        -->
+        <div>
+            <% items.forEach(function(image) { %>
+                <div class="container" style="height: auto;width: auto;">
+                    <!-- <style>
+                    img {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                    }
+                    
+                    h5 {
+                        text-align: center;
+                    }
+                </style> -->
+                    <!-- <div style="width: 30%; float: left; background-color: lightslategrey;">
+                    <img src="data:image/<%=image.img.contentType%>;base64,
+						<%=image.img.data.toString('base64')%>" height="275" width="350">
+                </div>
+                <div style="width: 20%;background-color: aquamarine;float: right;">
+
+                    <%= image.name %>|| </div>
+                <div style="width: 20%;background-color: aquamarine;float: right;">
+                    <%= image.town %>|| </div>
+                <div style="width: 30%;background-color: aquamarine;float: right;">
+                    <%= image.desc%>
+                        <br>
+                </div>
+
+
+                <br>
+                <hr> -->
+
+                <!-- <div>
+
+                    <div class="img__wrap" style="Text-align:center;float:left; background-color: rgb(255, 255, 255); height: 250px;border-radius: 10px; padding:10px;">
+
+                        <img class="img__img" src="data:image/<%=image.img.contentType%>;base64,
+                        <%=image.img.data.toString('base64')%>" height="%" width="100%">
+                    
+                        <a class="img__description" href="/test?id=<%= image._id %>" id="adid">Show More</a>
+                        <p class="name_desc"><%= image.town %>, <%= image.name %></p>
+                    </div>
+                    </div> -->
+                    <div>
+
+                        <div class="img__wrap" style="Text-align:center;float:left; background-color: white; height: 250px;" >
+    
+                            <img class='img_img' src="data:image/<%=image.img.contentType%>;base64,
+                            <%=image.img.data.toString('base64')%>" height="%" width="100%">
+                        
+                                <p class="img__description"><a  href="/test?id=<%= image._id %>" id="adid">Show More</a></p>
+                                <p class="name_desc"  background-size: contain;"><%= image.town %>, <%= image.name %></p>
+                            
+                        </div>
+                        </div>
+
+                </div>
+
+                <% }) %>
+        </div>
+        <%-include('./partial/footer.ejs')-%>

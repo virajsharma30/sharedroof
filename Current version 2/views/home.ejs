@@ -1,0 +1,84 @@
+<%-include('./partial/header.ejs')-%>
+<br><br><br>
+    <hr>
+
+    <hr>
+
+    
+<div class="hero1">
+    <h1 class="add-post">Post Your Ad</h1>
+    <div class="form-box1">
+        <div class="Dt-1">
+            <h1 >Include Some Details</h1>
+            <form action="/" class="input-groups" method="POST" enctype="multipart/form-data">
+            <label for="name" class="label-fields">Name :</label>
+            <input type="text" id="name" class="input-fields" placeholder="" value="" name="name" maxlength="50" required>
+            <br>
+            <label for="town" class="label-fields">Town :</label>
+            <input type="text" id="town" class="input-fields" placeholder="" value="" name="town" required>
+        </div>
+        <div class="img-upload">
+            <label for="image" class="label-fields">Upload Image :</label><br>
+            <input type="file" id="image" class="img-fields" name="image" value="" required>
+        </div>
+        <label for="desc" class="label-fields">Add description :</label><br>
+        <textarea id="desc" rows="5" cols="40" name="desc" placeholder="" required></textarea>
+        <br>
+        <div class="submit-btn1">
+            <button type="submit" >Submit</button>
+        </div>
+    </form>
+    </div>
+</div>
+
+
+
+    <hr>
+    <h1>Advertisements</h1>
+    <div>
+        <% items.forEach(function(image) { %>
+            <div class="container" style="background-color:#dddd;margin-left: 5px; margin-top: 30px;">
+<!--                 <style>
+                    img {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                    }
+                    
+                    h5 {
+                        text-align: center;
+                    }
+                </style>
+                <div>
+                    <img src="data:image/<%=image.img.contentType%>;base64,
+						<%=image.img.data.toString('base64')%>" height="275" width="350">
+                    <div>
+                        <h5>
+                            <%= image.name %>||
+                                <%= image.town %>||
+                                    <%= image.desc%>
+                        </h5>
+                    </div>
+                </div> -->
+                <div>
+
+                    <div class="img__wrap" style="Text-align:center;float:left; background-color: white; height: 250px;" >
+
+                        <img class='img_img' src="data:image/<%=image.img.contentType%>;base64,
+                        <%=image.img.data.toString('base64')%>" height="%" width="100%">
+                    
+                            <p class="img__description"><a  href="/test?id=<%= image._id %>" id="adid">Show More</a></p>
+                            <p class="name_desc"><%= image.town %>, <%= image.name %></p>
+                        
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <% }) %>
+    </div>
+    </div>
+
+    <%-include('./partial/footer.ejs')-%>
